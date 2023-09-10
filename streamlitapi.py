@@ -21,8 +21,10 @@ def main():
         sex = 0
     elif sex == "Female" or sex == "female": 
         sex = 1
+    else: 
+        st.error('Invalid Input!', icon="🚨")
 
-    st.success(sex)
+    # st.success(sex)
 
     age = st.text_input("Enter your age: ")
     sibsp = st.text_input("Enter your Siblings: ")
