@@ -17,10 +17,12 @@ def main():
     passenger_class = st.text_input("Enter the passenger class: ")
     sex = st.text_input("Enter your sex (Male/Female): ")
 
-    # if sex == "Male" or sex == "female": 
-    #     sex = 0
-    # elif sex == "Female" or sex == "female": 
-    #     sex = 1
+    if sex == "Male" or sex == "male": 
+        sex = 0
+    elif sex == "Female" or sex == "female": 
+        sex = 1
+
+    st.success(sex)
 
     age = st.text_input("Enter your age: ")
     sibsp = st.text_input("Enter your Siblings: ")
