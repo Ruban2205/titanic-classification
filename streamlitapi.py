@@ -14,9 +14,9 @@ def main():
     st.title("Titanic Classification - rubangino.in")
 
     # Input Variables 
-    passenger_class = st.text_input("Enter the passenger class: ")
-    sex = st.text_input("Enter your sex (Male/Female): ")
+    passenger_class = st.text_input("Enter the passenger class: (1/2/3)")
 
+    sex = st.text_input("Enter your sex (Male/Female): ")
     if sex == "Male" or sex == "male": 
         sex = 0
     elif sex == "Female" or sex == "female": 
@@ -26,11 +26,23 @@ def main():
 
     # st.success(sex)
 
-    age = st.text_input("Enter your age: ")
-    sibsp = st.text_input("Enter your Siblings: ")
-    parch = st.text_input("Enter your parch: ")
-    fare = st.text_input("Enter your Fare: ")
-    embarked = st.text_input("Enter your Embarked: ")
+    age = st.text_input("Enter their age: ")
+
+    sibsp = st.text_input("Enter their Siblings: ")
+
+    parch = st.text_input("Enter their parch: ")
+
+    fare = st.text_input("Enter their ticket Fare: ")
+
+    embarked = st.text_input("Enter their Port of Embarked: (C=Cherbourg | Q=Queentown | S=Southampton) ")
+    if embarked == "C" or embarked == "c": 
+        embarked = 1
+    elif embarked == "S" or embarked == "s": 
+        embarked = 0
+    elif embarked == "Q" or embarked == "q": 
+        embarked = 2
+    else: 
+        st.error("Invalid Input!", icon="🚨")
 
     # Button to predict
     if st.button('Predict'): 
